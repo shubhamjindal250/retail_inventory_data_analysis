@@ -3,25 +3,25 @@
 
 This project delivers a complete end-to-end Power BI analysis of a Retail Inventory & Shipment dataset. It covers data cleaning, transformation, modeling, DAX calculations, and the creation of an interactive dashboard that provides insights into warehouse performance, shipment modes, customer satisfaction, product importance, and delivery efficiency.
 
-The objective of this project is to help understand operational patterns, identify delay drivers, optimize warehouse processes, and support decision-making related to logistics and inventory management.
+The objective is to help understand operational patterns, identify delay drivers, optimize warehouse processes, and support logistics-driven decision-making.
 
 🧹 Data Cleaning & Preparation (Power Query)
 
-Before building the dashboard, the dataset required significant preparation. Key steps included:
+Before analysis, the dataset required structured cleaning. Key steps:
 
-Fixing incorrect data types (Whole Number, Text, Currency).
+Correcting data types (Number, Text, Currency).
 
-Removing blanks, invalid entries, or irrelevant rows.
+Removing blanks, invalid, or duplicate rows.
 
-Standardizing Product Importance, Shipment Mode, and Warehouse Block fields.
+Standardizing fields (Warehouse Block, Shipment Mode, Product Importance).
 
-Extracting clean numerical columns for aggregation.
+Extracting clean fields for aggregation.
 
-Creating consistent structure for delivery analysis and performance comparison.
+Building a clean semantic model for reporting.
 
 🧮 DAX Measures Used
 
-Several DAX measures were created to calculate KPIs and support advanced insights:
+Essential DAX measures used in the dashboard:
 
 Total Revenue
 
@@ -29,19 +29,19 @@ Average Revenue per Order
 
 Average Customer Rating
 
-Total Quantity Shipped
+Total Quantity
 
-Quantity by Shipment Mode
+Quantity by Mode of Shipment
 
 Quantity by Warehouse Block
 
-% On-Time Delivery
+On-Time Delivery %
 
-Delayed Shipment Count
+Delayed Deliveries Count
 
-Product Importance Wise Quantity
+Product Importance Quantity Split
 
-These DAX measures enabled deeper analysis of shipping performance, warehouse workload, and product-level contribution.
+These measures allow performance analysis across logistics, customer behavior, and warehouse operations.
 
 📈 Dashboard Features
 ⭐ KPI Cards
@@ -52,140 +52,143 @@ Average Revenue
 
 Average Customer Rating
 
-Total Quantity
+Total Quantity Shipped
 
-On-Time Delivery Percentage
+% Orders Delivered on Time
 
-📊 Visualizations
+📊 Visuals
 
-The dashboard includes a variety of visuals:
-
-Sum of Quantity by Mode of Shipment
+Quantity by Mode of Shipment
 
 Quantity by Product Importance
 
 Quantity by Warehouse Block
 
-Summary table for all warehouse blocks
+Warehouse performance summary table
 
 Donut chart of On-Time vs Late Deliveries
 
-Quantity distribution by categories (Mode, Importance, Warehouse)
+Filters/Slicers for Mode, Block, and Product Importance
 
-Filters/Slicers: Shipment Mode, Warehouse Block, Product Importance
-
-These visuals allow stakeholders to analyze performance across logistics, warehouse efficiency, and customer-related metrics.
+These visuals make it easy to explore operational patterns and performance gaps.
 
 🛠 Tools & Technologies
 
 Power BI Desktop
 
-Power Query for cleaning & transformation
+Power Query Editor
 
 DAX (Data Analysis Expressions)
 
-Retail Inventory CSV Dataset
+Retail Inventory Dataset (CSV)
 
 🎯 Project Outcomes
 
-This project demonstrates strong capabilities in:
+This project demonstrates expertise in:
 
 Business Intelligence & Visualization
 
-Data Cleaning and Shaping
+Data Cleaning & Preparation
 
 Data Modeling
 
-DAX Measure Creation
+DAX Calculations
 
-Operational & Logistics Insight Generation
+Operational Insight Generation
 
-Dashboard Design & Performance Tracking
+Dashboard Design
 
-The report highlights operator bottlenecks, identifies delivery delays, and reveals product-driven and warehouse-driven performance patterns.
+The report highlights performance gaps, delivery delays, and product-driven workload.
 
 📢 Impact & Key Insights (Story of the Dashboard)
 
-This dashboard presents several impactful insights that clearly explain how the business is performing at both the warehouse and shipment levels.
+Below are the most important insights derived from the dashboard—these form the core impact of your analysis.
 
 1️⃣ Ship Mode Handles the Most Quantity but Causes Most Delays
 
-Ship is the largest shipment mode, but it contributes significantly to late deliveries.
-This indicates dependency on slower transportation types.
+Ship is the highest-used shipment mode and also shows the most late deliveries.
 
-Impact: Faster alternative modes (Road/Flight) should be preferred for urgent or high-value orders.
+Impact: Shift urgent deliveries to Road/Flight to improve on-time performance.
 
-2️⃣ Low and Medium Importance Products Drive Majority of the Sales
+2️⃣ Low & Medium Importance Products Dominate Inventory Movement
 
-Low-importance products contribute the highest shipment quantity, followed by medium.
-High-importance items have the least volume.
+Low-importance and medium-importance products drive the bulk of the quantity.
 
-Impact: Inventory planning must prioritize low- and medium-importance products to reduce stockouts.
+Impact: Inventory teams must focus on these categories for stock planning.
 
-3️⃣ Warehouse Block F Handles Nearly Double the Load
+3️⃣ Warehouse Block F is Overloaded Compared to A–D
 
-While A–D blocks distribute workload evenly, Warehouse F handles the highest number of orders.
+Warehouse F processes nearly twice the orders of other blocks.
 
-Impact: Overloaded warehouse → higher stress, delays, and potential inefficiencies. Redistribution is recommended.
+Impact: Redistribute load across warehouses to avoid delays and workload imbalance.
 
-4️⃣ Delivery Delays Are Significantly High (~40%)
+4️⃣ Delivery Delays Are High (~40%)
 
-A substantial percentage of shipments do not reach on time.
+A significant percentage of shipments do not reach on time.
 
-Impact:
-Delivery process improvements are necessary to increase customer trust and reduce operational losses.
+Impact: Review logistics partners, routes, and SLA adherence.
 
-5️⃣ Customer Ratings Are Below Average (≈2.99)
+5️⃣ Customer Ratings Are Low (≈2.99)
 
-Despite large shipment volumes, customer satisfaction remains poor.
+Despite high shipment volume, customer satisfaction is poor.
 
-Impact:
-Improving delivery consistency and reducing customer care interactions can improve ratings.
+Impact: Improve last-mile delivery, reduce complaints, and enhance service quality.
 
-6️⃣ Product Importance Strongly Influences Delivery Time
+6️⃣ Product Importance Affects Delivery Speed
 
-High-importance items are shipped less but tend to reach on time more frequently.
-Low-importance items show the worst delivery consistency.
+High-importance products are fewer but receive better delivery priority.
 
-Impact:
-Better prioritization rules could improve overall service levels.
+Impact: Expand prioritization rules to ensure consistent service quality across all product categories.
 
 🧵 Overall Story of the Data
 
-The data reveals a business that ships large volumes of products consistently, but struggles with delivery efficiency, customer satisfaction, and warehouse balance.
+The dashboard reveals that operations are productively high-volume, but performance is impacted by:
 
-Ship mode dominates quantity, but also causes delays.
+Imbalanced warehouse workloads
 
-Low-importance products drive most sales but are handled inefficiently.
+Inefficient shipment modes
 
-Warehouse F is overburdened, affecting timely delivery.
+High late-delivery rate
 
-Customer ratings reflect dissatisfaction caused by delays or product issues.
+Low customer satisfaction
 
-The dataset tells a clear operational story:
-Optimize warehouse distribution, improve logistics planning, reduce delays, and redesign prioritization for shipments.
+Uneven prioritization rules
+
+The business can significantly improve by optimizing:
+
+Shipment mode allocation
+
+Warehouse workload distribution
+
+Delivery SLAs
+
+Inventory planning for popular products
+
+The story is simple:
+Improve logistics → reduce delays → increase customer satisfaction → grow business performance.
 
 📂 Files Included
 
 Power BI Report (.pbix)
 
-Dataset (retail_inventory.csv)
+Retail Inventory Dataset
 
 README Documentation
 
 Dashboard Screenshots
 
+✔ Preview
+
+(Add dashboard screenshot)
 
 📘 How to Use
 
 Download Retail_Inventory.pbix
 
-Open with Power BI Desktop (Free)
+Open it in Power BI Desktop (Free)
 
-View insights or connect your own dataset for further analysis
+Review dashboard or plug in new datasets
 
 ✔ Conclusion
 
-The Retail Inventory & Delivery Performance Analysis project shows how raw shipment and warehouse data can be transformed into a meaningful, operational intelligence report. The dashboard provides deep insights into warehouse efficiency, delivery delays, shipment strategy, customer satisfaction, and prioritization of products.
-
-The insights support key decisions in logistics optimization, warehouse management, and customer experience improvement.
+The Retail Inventory & Delivery Performance Dashboard transforms raw logistics data into actionable insights. It highlights operational inefficiencies, warehouse bottlenecks, product movement patterns, and delivery challenges—empowering organizations to optimize their supply chain and improve customer satisfaction.
